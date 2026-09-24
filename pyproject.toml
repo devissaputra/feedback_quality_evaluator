@@ -5,10 +5,25 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "feedback-quality-evaluator"
 version = "0.1.0"
-description = "Heuristic evaluator for formative feedback specificity, actionability, explanatory evidence, and rater agreement."
+description = "Context-aware formative feedback evaluation with multidimensional heuristics, evidence boundaries, error flags, and human-rater validation."
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [{name = "Devis Wawan Saputra"}]
+readme = "README.md"
+keywords = [
+  "formative-feedback",
+  "feedback-quality",
+  "instructional-design",
+  "assessment",
+  "feedback-literacy",
+  "learning-analytics",
+  "ai-in-education",
+  "inter-rater-reliability",
+  "python",
+]
+
+[project.urls]
+Repository = "https://github.com/devissaputra/feedback_quality_evaluator"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
