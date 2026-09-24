@@ -2,32 +2,147 @@
 
 ## Intended use
 
-Feedback Quality Evaluator is meant for research, prototyping, and educational design work. It should help people inspect a learning-related signal or decision, not make consequential decisions on their behalf.
+Feedback Quality Evaluator is a research and instructional-design prototype for inspecting feedback properties.
 
-## Human oversight
+It should not be used as an autonomous judge of teachers, learners, employees, or AI systems.
 
-A person should be able to see what evidence produced an output, question it, and override it. If the system cannot explain a recommendation well enough for meaningful review, the recommendation should not be used in a high-stakes setting.
+## Feedback quality is contextual
+
+A message that looks polished can still be wrong, irrelevant, mistimed, or unusable.
+
+Likewise, a short message can be highly useful when it points precisely to an error and a next step.
+
+The system therefore must not equate:
+
+- length with specificity
+- confidence with correctness
+- politeness with pedagogical usefulness
+- presence of "because" with a valid explanation
+- action verbs with appropriate action
+- rubric keywords with genuine alignment
+
+## Disciplinary correctness
+
+The current implementation does not infer factual correctness.
+
+Reference alignment is only scored when an external reference verdict is supplied.
+
+That verdict should come from defensible evidence such as:
+
+- validated answer key
+- verified calculation
+- expert adjudication
+- task/rubric reference
+- authoritative source
+
+If evidence is missing or insufficient, correctness-related evaluation should remain **not evaluable**.
+
+## Risk of confidently wrong feedback
+
+Incorrect feedback can actively harm learning.
+
+A system that produces fluent but unsupported advice should not receive a high overall "quality" score merely because its wording is specific and actionable.
+
+This is one reason the current implementation does not compute a default composite score.
+
+## Person-focused judgment
+
+Feedback should focus on work, strategy, evidence, or process rather than labeling the learner.
+
+The baseline flags a small lexical set of person-focused judgments.
+
+A real study needs broader language and cultural validation.
+
+## Learner agency
+
+Overly directive feedback can reduce opportunities for judgment and self-regulation.
+
+The current agency dimension looks for limited lexical indicators of choice or coercion.
+
+It is not a complete measure of autonomy support.
+
+## Feedback uptake
+
+Text quality is not the same as feedback effectiveness.
+
+A learner may:
+
+- ignore feedback
+- misunderstand it
+- disagree with it
+- lack time to act
+- lack prerequisite knowledge
+- revise successfully
+- revise in an unintended way
+
+A real intervention study should measure uptake and revision separately.
 
 ## Privacy
 
-Collect only the data the study actually needs. Remove direct identifiers, document retention periods, restrict access to raw traces, and avoid storing free text, audio, video, or other sensitive material unless it is essential to the research question.
+Feedback text and learner work can contain identifiable educational records.
 
-## Fairness
+Do not publish or commit:
 
-Overall accuracy can hide uneven errors. When it is lawful and ethically appropriate, inspect false alarms, missed support, calibration, and recommendation quality across relevant groups and contexts. Do not treat a single fairness metric as proof that a system is fair.
+- named submissions
+- private instructor comments
+- grades
+- accommodations
+- health/disability information
+- private messages
+- licensed assessment items
+- restricted institutional feedback
+- proprietary learner data
 
-## Educational risk
+Use de-identification and approved storage for real studies.
 
-A technically correct output can still lead to a poor learning experience. Watch for labels that become self-fulfilling, excessive nudging, over-support that removes productive struggle, or analytics that reward surveillance rather than learning.
+## Evaluating instructors or AI systems
 
-## Uses excluded from this prototype
+Do not use the heuristic as a hidden performance-management score.
 
-- autonomous grading, admissions, or disciplinary decisions
+If used to study instructors, tutors, or AI feedback systems:
+
+- disclose the evaluation dimensions
+- retain the original feedback examples
+- allow human review
+- report uncertainty and disagreement
+- avoid ranking people or systems from one aggregate score
+
+## Linguistic and cultural bias
+
+The current lexical rules are English-oriented even though tokenization supports Unicode.
+
+Action, agency, tone, and explanation cues may differ across languages and cultures.
+
+Do not generalize scores to other languages without separate validation.
+
+## Excluded uses
+
+Do not use this prototype alone for:
+
+- grading learners
+- instructor performance decisions
 - employment decisions
-- psychological or medical diagnosis
-- covert monitoring or surveillance
-- any deployment where affected people cannot understand or challenge the output
+- admissions
+- disciplinary decisions
+- automated teacher ranking
+- deciding whether an AI system is "safe"
+- psychological or personality assessment
+- covert monitoring
 
-## Before a real-user study or deployment
+## Before real deployment or research use
 
-Document consent or another lawful basis, data governance, access controls, subgroup evaluation, calibration where probabilities are used, human escalation paths, and clear rollback criteria.
+Document:
+
+- rubric definitions
+- reference-evidence process
+- rater training
+- adjudication
+- language and discipline
+- human review
+- privacy controls
+- known heuristic failure modes
+- feedback timing
+- learner uptake measures
+- appeal/correction procedure
+
+The evaluator should support careful review, not replace educational judgment.
