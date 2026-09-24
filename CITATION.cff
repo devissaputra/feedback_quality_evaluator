@@ -5,6 +5,6 @@ type: software
 authors:
   - family-names: "Saputra"
     given-names: "Devis Wawan"
-repository-code: "https://github.com/devissaputra/feedback-quality-evaluator"
+repository-code: "https://github.com/devissaputra/feedback_quality_evaluator"
 license: MIT
 version: 0.1.0
