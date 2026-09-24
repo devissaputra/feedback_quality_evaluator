@@ -1,8 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="550" viewBox="0 0 1200 550" role="img" aria-labelledby="title desc">
+<title id="title">Feedback Quality Evaluator evaluation checklist</title>
+<desc id="desc">Evaluation checklist for construct validity, reference validity, human-rater reliability, adversarial robustness, cross-context generalization, and learner uptake.</desc>
 <rect width="100%" height="100%" fill="#FAFBFA"/>
-<text x="60" y="64" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#1B2430">Feedback Quality Evaluator · evaluation dashboard</text>
-<text x="60" y="99" font-family="Arial, sans-serif" font-size="17" fill="#5B6660">Evaluation dimensions to inspect. Bars are illustrative only and do not report measured results.</text>
-<rect x="52" y="126" width="1096" height="300" rx="18" fill="#F3F5F3" stroke="#CDD3CF"/>
-<text x="70" y="189" font-family="Arial, sans-serif" font-size="17" fill="#26343B">specificity</text><rect x="330" y="170" width="600" height="25" rx="8" fill="#E8EBE8"/><rect x="330" y="170" width="468" height="25" rx="8" fill="#5A7F82"/><text x="950" y="189" font-family="Arial, sans-serif" font-size="15" fill="#5B6660">illustrative</text><text x="70" y="259" font-family="Arial, sans-serif" font-size="17" fill="#26343B">actionability</text><rect x="330" y="240" width="600" height="25" rx="8" fill="#E8EBE8"/><rect x="330" y="240" width="396" height="25" rx="8" fill="#5A7F82"/><text x="950" y="259" font-family="Arial, sans-serif" font-size="15" fill="#5B6660">illustrative</text><text x="70" y="329" font-family="Arial, sans-serif" font-size="17" fill="#26343B">clarity</text><rect x="330" y="310" width="600" height="25" rx="8" fill="#E8EBE8"/><rect x="330" y="310" width="348" height="25" rx="8" fill="#5A7F82"/><text x="950" y="329" font-family="Arial, sans-serif" font-size="15" fill="#5B6660">illustrative</text><text x="70" y="399" font-family="Arial, sans-serif" font-size="17" fill="#26343B">agreement with raters</text><rect x="330" y="380" width="600" height="25" rx="8" fill="#E8EBE8"/><rect x="330" y="380" width="432" height="25" rx="8" fill="#5A7F82"/><text x="950" y="399" font-family="Arial, sans-serif" font-size="15" fill="#5B6660">illustrative</text>
-<text x="70" y="455" font-family="Arial, sans-serif" font-size="15" fill="#5B6660">Good feedback should tell a learner what to improve and how, not merely assign praise or</text><text x="70" y="476" font-family="Arial, sans-serif" font-size="15" fill="#5B6660">criticism.</text>
+<text x="60" y="64" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#1B2430">Feedback Quality Evaluator · evaluation checklist</text>
+<text x="60" y="99" font-family="Arial, sans-serif" font-size="17" fill="#5B6660">A useful evaluator must survive more than polished wording and keyword matches.</text>
+
+<rect x="60" y="140" width="330" height="130" rx="18" fill="#E8F1F3" stroke="#87949A"/>
+<text x="82" y="174" font-family="Arial" font-size="17" font-weight="700" fill="#1B2430">Construct validity</text>
+<text x="82" y="203" font-family="Arial" font-size="14" fill="#26343B">Do rubric dimensions represent useful</text>
+<text x="82" y="225" font-family="Arial" font-size="14" fill="#26343B">properties rather than surface style?</text>
+
+<rect x="435" y="140" width="330" height="130" rx="18" fill="#EEF3E8" stroke="#87949A"/>
+<text x="457" y="174" font-family="Arial" font-size="17" font-weight="700" fill="#1B2430">Reference validity</text>
+<text x="457" y="203" font-family="Arial" font-size="14" fill="#26343B">Is the answer key or expert evidence</text>
+<text x="457" y="225" font-family="Arial" font-size="14" fill="#26343B">itself defensible?</text>
+
+<rect x="810" y="140" width="330" height="130" rx="18" fill="#F5EDE4" stroke="#87949A"/>
+<text x="832" y="174" font-family="Arial" font-size="17" font-weight="700" fill="#1B2430">Rater reliability</text>
+<text x="832" y="203" font-family="Arial" font-size="14" fill="#26343B">Do trained raters interpret each</text>
+<text x="832" y="225" font-family="Arial" font-size="14" fill="#26343B">dimension consistently?</text>
+
+<rect x="60" y="305" width="330" height="130" rx="18" fill="#ECE8F5" stroke="#87949A"/>
+<text x="82" y="339" font-family="Arial" font-size="17" font-weight="700" fill="#1B2430">Adversarial robustness</text>
+<text x="82" y="368" font-family="Arial" font-size="14" fill="#26343B">Can long vague or confidently wrong</text>
+<text x="82" y="390" font-family="Arial" font-size="14" fill="#26343B">feedback fool the evaluator?</text>
+
+<rect x="435" y="305" width="330" height="130" rx="18" fill="#F4EFE8" stroke="#87949A"/>
+<text x="457" y="339" font-family="Arial" font-size="17" font-weight="700" fill="#1B2430">Cross-context validity</text>
+<text x="457" y="368" font-family="Arial" font-size="14" fill="#26343B">Do findings hold across disciplines,</text>
+<text x="457" y="390" font-family="Arial" font-size="14" fill="#26343B">tasks, languages, and feedback sources?</text>
+
+<rect x="810" y="305" width="330" height="130" rx="18" fill="#EAF0EC" stroke="#87949A"/>
+<text x="832" y="339" font-family="Arial" font-size="17" font-weight="700" fill="#1B2430">Learner uptake</text>
+<text x="832" y="368" font-family="Arial" font-size="14" fill="#26343B">Can learners understand and use the</text>
+<text x="832" y="390" font-family="Arial" font-size="14" fill="#26343B">feedback to improve later work?</text>
+
+<text x="60" y="488" font-family="Arial" font-size="15" fill="#5B6660">Text quality and feedback effectiveness are related but distinct research questions.</text>
 </svg>
