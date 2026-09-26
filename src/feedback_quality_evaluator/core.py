@@ -1,3 +1,7 @@
+# Calculation reading guide: ../CALCULATIONS.md (repository root).
+# Kappa = (observed agreement - chance agreement)/(1 - chance agreement).
+# Constant identical ratings make chance agreement one and kappa undefined, not perfect. Lexical cues do not prove semantic grounding. Reference correctness is supplied externally; dimensions are not collapsed into a total quality score.
+
 import math
 import re
 from collections import Counter
@@ -717,8 +721,8 @@ def _validate_labels(labels_a, labels_b):
         )
 
 
-def cohen_kappa(labels_a, labels_b) -> float:
-    """Return unweighted Cohen kappa for two rating sequences."""
+def cohen_kappa(labels_a, labels_b) -> float | None:
+    """Return unweighted kappa, or None when chance agreement is one."""
     _validate_labels(labels_a, labels_b)
     categories = sorted(set(labels_a) | set(labels_b), key=str)
     observed = (
@@ -737,7 +741,7 @@ def cohen_kappa(labels_a, labels_b) -> float:
         share_a[category] * share_b[category]
         for category in categories
     )
-    return 1.0 if expected == 1.0 else (
+    return None if expected == 1.0 else (
         observed - expected
     ) / (1 - expected)
 
@@ -748,7 +752,7 @@ def weighted_cohen_kappa(
     *,
     weighting="quadratic",
 ):
-    """Return weighted kappa for ordinal integer ratings."""
+    """Return weighted kappa; None means expected disagreement is zero."""
     _validate_labels(labels_a, labels_b)
     if weighting not in {"linear", "quadratic"}:
         raise ValueError(
@@ -766,7 +770,7 @@ def weighted_cohen_kappa(
 
     categories = sorted(set(all_labels))
     if len(categories) == 1:
-        return 1.0
+        return None
 
     index = {
         category: position
@@ -800,7 +804,7 @@ def weighted_cohen_kappa(
             )
 
     if expected == 0:
-        return 1.0 if observed == 0 else 0.0
+        return None
     return 1.0 - observed / expected
 
 

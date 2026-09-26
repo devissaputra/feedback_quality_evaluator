@@ -1,14 +1,29 @@
 # Feedback Quality Evaluator
 
+This evaluator examines feedback against supplied task context using separate, transparent rubric dimensions. It preserves missing evidence as unevaluable, exposes lexical triggers, and provides rater-agreement tools whose degenerate cases are handled explicitly. The project is a baseline for validation and error analysis, not an automated authority on disciplinary correctness or feedback quality.
+
+## Start here
+
+- [Calculations, evidence and verification scope](CALCULATIONS.md)
+- [Figure sources and exact numerical paths](docs/figure_spec.json)
+- [Data status](data/README.md)
+
+![Study question, data, design and interpretation](assets/review_overview.svg)
+
+![Defined calculation and source-linked evidence](assets/review_calculations.svg)
+
+**Review scope:** 41 existing unittest checks passed. The bundled demonstration executed successfully in this review.
+
+## Detailed project documentation
+
 > Context-aware formative-feedback evaluation with separate rubric dimensions, explicit evidence boundaries, error flags, revision suggestions, and human-rater validation tools.
 
 [![CI](https://github.com/devissaputra/feedback_quality_evaluator/actions/workflows/ci.yml/badge.svg)](https://github.com/devissaputra/feedback_quality_evaluator/actions/workflows/ci.yml)
 
-![Feedback Quality Evaluator architecture](assets/architecture.svg)
 
 **Area:** AI in Education · Formative Feedback · Instructional Design  
 **Status:** working research prototype  
-**Author:** Devis Wawan Saputra
+**Author:** Devis Saputra
 
 ## Why this project exists
 
@@ -32,7 +47,6 @@ It is **not** a validated automated judge of feedback quality.
 
 **Context controls what the evaluator is allowed to claim.**
 
-![Feedback Quality Evaluator data and reasoning flow](assets/data_flow.svg)
 
 The main API receives a structured `FeedbackContext` containing:
 
@@ -204,7 +218,6 @@ The repository does not automatically rewrite feedback in the current baseline.
 
 ## Synthetic stress-test corpus
 
-![Feedback Quality Evaluator synthetic demo](assets/demo_snapshot.svg)
 
 The repository includes **20 synthetic contextual feedback cases** designed to test failure modes.
 
@@ -380,7 +393,6 @@ See `docs/related_work.md` for the scope boundary.
 
 ## Evaluation checklist
 
-![Feedback Quality Evaluator evaluation checklist](assets/evaluation_dashboard.svg)
 
 A real empirical study should investigate:
 

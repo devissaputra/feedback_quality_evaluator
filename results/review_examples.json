@@ -1,0 +1,9 @@
+{
+  "kind": "illustrative_calculation",
+  "note": "Worked rating examples; undefined kappa is shown explicitly.",
+  "outputs": {
+    "Cohen kappa: [1,1,0] vs [1,0,0]": 0.39999999999999997,
+    "constant-label kappa": null,
+    "exact agreement of constant labels": 1.0
+  }
+}

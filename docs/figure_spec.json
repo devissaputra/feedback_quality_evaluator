@@ -1,0 +1,38 @@
+{
+  "question": "Is feedback grounded and actionable in its supplied context?",
+  "data": "Feedback text, goal, learner work, evidence and an optional external reference verdict.",
+  "method": "Score separate lexical rubric dimensions; preserve not-evaluable fields; report flags and compare ratings.",
+  "formula": "Kappa = (observed agreement - chance agreement)/(1 - chance agreement).",
+  "interpretation": "Constant identical ratings make chance agreement one and kappa undefined, not perfect. Lexical cues do not prove semantic grounding. Reference correctness is supplied externally; dimensions are not collapsed into a total quality score.",
+  "status": "SYNTHETIC / RULE-BASED PROTOTYPE | no educational validity claim",
+  "source": "results/review_examples.json",
+  "rows": [
+    {
+      "label": "Cohen kappa: [1,1,0] vs [1,0,0]",
+      "path": [
+        "outputs",
+        "Cohen kappa: [1,1,0] vs [1,0,0]"
+      ],
+      "unit": "unitless"
+    },
+    {
+      "label": "constant-label kappa",
+      "path": [
+        "outputs",
+        "constant-label kappa"
+      ],
+      "unit": "unitless"
+    },
+    {
+      "label": "exact agreement of constant labels",
+      "path": [
+        "outputs",
+        "exact agreement of constant labels"
+      ],
+      "unit": "unitless"
+    }
+  ],
+  "table_title": "Worked example — illustrative, not a measured research result",
+  "evidence_note": "Illustrative inputs and calculations are in scripts/review_examples.py.",
+  "finding": "This evaluator examines feedback against supplied task context using separate, transparent rubric dimensions. It preserves missing evidence as unevaluable, exposes lexical triggers, and provides rater-agreement tools whose degenerate cases are handled explicitly. The project is a baseline for validation and error analysis, not an automated authority on disciplinary correctness or feedback quality."
+}
